@@ -1,0 +1,26 @@
+<!--<h2>{{ item.name | uppercase }} Details</h2>
+<div><span>id: </span>{{item.id}}</div>
+<div><span>name: </span>{{item.name}}</div>
+<div>
+  <label>Item Name:
+    <input [(ngModel)]="item.name" placeholder="name">
+  </label>
+</div>-->
+
+<div *ngIf="selectedItem ; else othr_disp">
+  <h2>{{ selectedItem.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{selectedItem.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedItem.name" placeholder="name">
+    </label>
+  </div>
+</div>
+
+<ng-template #othr_disp><h2>Empty List</h2></ng-template>
+
+<ul class="items">
+  <li *ngFor="let item of items" (click)="onSelect(item)">
+    <span class="badge">{{item.id}}</span> {{item.name}}
+  </li>
+</ul>
