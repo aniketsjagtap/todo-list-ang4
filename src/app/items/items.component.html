@@ -19,8 +19,20 @@
 
 <ng-template #othr_disp><h2>Empty List</h2></ng-template>
 
-<ul class="items">
-  <li *ngFor="let item of items" (click)="onSelect(item)">
-    <span class="badge">{{item.id}}</span> {{item.name}}
-  </li>
-</ul>
+
+<div>
+  <ul class="items">
+    <li *ngFor="let item of items , let i = index" >
+      {{i}}<span class="badge">{{item.id}}</span> {{item.name}}
+      <button (click)="onSelect(item)">Edit</button>
+      <button (click)="onDelete(i)">Delete</button>
+    </li>
+  </ul>
+
+
+   Add Item : 
+    <input [(ngModel)] = "addItem.id" placeholder = "id">
+    <input [(ngModel)] = "addItem.name" placeholder = "name">
+  
+  <button (click)="onAdd()">Add</button>
+</div>
