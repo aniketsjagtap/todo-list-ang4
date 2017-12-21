@@ -26,3 +26,19 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # todo-list-ang4
+
+##Quick Start
+
+# clone the repo
+git clone https://github.com/aniketsjagtap/todo-list-ang4.git
+
+# change into the repo directory
+cd todo-list-ang4
+
+# install 
+npm install
+
+# run
+npm start
+
+Then visit http://localhost:3000 in your browser.
