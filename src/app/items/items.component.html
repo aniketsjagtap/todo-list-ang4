@@ -6,33 +6,65 @@
     <input [(ngModel)]="item.name" placeholder="name">
   </label>
 </div>-->
+<div align="center">
+    
+  
+    Add Item : 
+     <input [(ngModel)] = "addItem.name" placeholder = "name" type="text" required>
+     <input [(ngModel)] = "addItem.price" placeholder = "price" type="number" required>
+   
+   <button (click)="onAdd()">Add</button>
+   <hr>
+  <table id = "to_do_tab">
+    <thead>
+      <td>Sr.No.</td>
+      <td>Name</td>
+      <td>Price</td>
+      <td>Operation</td>
+    </thead>
+    <tr *ngFor="let item of items , let i = index">
+      <td>
+          {{i+1}}
+      </td>
+      <td>
+          {{item.name}}
+      </td>
+      <td>
+          {{item.price}}
+      </td>
+      <td>
+         <!-- <button (click)="onSelect(item)">Edit</button>
+      &nbsp; &nbsp; &nbsp; &nbsp;-->
+          <button (click)="onDelete(i)">Delete</button>
+      </td>
+    </tr>
+   <!-- <ol class="items">
+      <li  >
+        <span class="badge"></span> 
+       
+        
+      </li>
+    </ol>-->
+  </table>
+  
+  </div>
 
-<div *ngIf="selectedItem ; else othr_disp">
+
+
+<!--<div *ngIf="selectedItem ; else othr_disp">-->
+<div *ngIf="selectedItem">
   <h2>{{ selectedItem.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{selectedItem.id}}</div>
+  
   <div>
     <label>name:
-      <input [(ngModel)]="selectedItem.name" placeholder="name">
+      <input [(ngModel)]="selectedItem.name" placeholder="name" type="text">
+    </label>
+    <label>
+        <input [(ngModel)]="selectedItem.price" placeholder="price" type="number">
     </label>
   </div>
 </div>
 
-<ng-template #othr_disp><h2>Empty List</h2></ng-template>
+<ng-template #othr_disp><h2>No Item is selected to Edit</h2></ng-template>
 
 
-<div>
-  <ul class="items">
-    <li *ngFor="let item of items , let i = index" >
-      {{i}}<span class="badge">{{item.id}}</span> {{item.name}}
-      <button (click)="onSelect(item)">Edit</button>
-      <button (click)="onDelete(i)">Delete</button>
-    </li>
-  </ul>
-
-
-   Add Item : 
-    <input [(ngModel)] = "addItem.id" placeholder = "id">
-    <input [(ngModel)] = "addItem.name" placeholder = "name">
-  
-  <button (click)="onAdd()">Add</button>
-</div>

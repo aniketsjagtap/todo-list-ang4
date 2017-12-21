@@ -9,8 +9,8 @@ import { ITEMS } from '../items-list';
 })
 export class ItemsComponent implements OnInit {
   /*item : Item = {
-    id: 1,
-    name: 'apple'
+     name: 'apple'
+     price: 100
   };*/
  // items : ITEMS;
   selectedItem : Item;
@@ -33,20 +33,22 @@ export class ItemsComponent implements OnInit {
 
   onSelect(item : Item): void{
     this.selectedItem = item;
+   
   }
 
   onAdd()
   {
     //alert("hi");
-    this.items.push(new Item(this.addItem.id,this.addItem.name));
+    this.items.push(new Item(this.addItem.name,this.addItem.price));
     console.log(this.items);
+    this.addItem.name = null;
+    this.addItem.price = null;
   }
 
   onDelete(index){
     console.log("index"+index);
     this.items.splice(index,1);
     console.log(this.items);
-
   }
 
 }

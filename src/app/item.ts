@@ -1,9 +1,10 @@
 export class Item{
-    id : number;
     name : string;
+    price : number;
 
-    constructor(id,name){
-        this.id = id;
+    constructor(name,price){
+        
         this.name = name;
+        this.price = price;
     }
 }

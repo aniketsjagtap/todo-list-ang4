@@ -1,0 +1,8 @@
+#to_do_tab{
+    align-content: center;
+    text-align: left;
+    color: crimson;
+}
+table, th, td {
+    border: 1px solid black;
+ }
