@@ -41,4 +41,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### run
 `npm start`
 
-Then visit `http://localhost:3000` in your browser.
+Then visit `http://localhost:4200` in your browser.
