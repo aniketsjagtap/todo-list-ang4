@@ -29,16 +29,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Quick Start
 
-# clone the repo
-git clone https://github.com/aniketsjagtap/todo-list-ang4.git
+### clone the repo
+`git clone https://github.com/aniketsjagtap/todo-list-ang4.git`
 
 ### change into the repo directory
-cd todo-list-ang4
+`cd todo-list-ang4`
 
 ### install 
-npm install
+`npm install`
 
 ### run
-npm start
+`npm start`
 
-Then visit http://localhost:3000 in your browser.
+Then visit `http://localhost:3000` in your browser.
