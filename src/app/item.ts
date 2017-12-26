@@ -1,5 +1,5 @@
 export class Item{
-    name : string;
+   [name : string] : any;
     price : number;
 
     constructor(name,price){

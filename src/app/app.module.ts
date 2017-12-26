@@ -8,9 +8,20 @@ import { ItemsComponent } from './items/items.component';
 import { ItemService } from './item.service';
 import { MessageService } from './message.service';
 import { MessageComponent } from './message/message.component';
+import { HttpModule } from '@angular/http';
+import { RouterModule,Routes } from '@angular/router';
 
+const appRoutes : Routes = [
+  {
+    path : '',
+    component : AppComponent
+  },
+  {
+    path : 'items',
+    component : ItemsComponent
+  }
 
-
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +30,9 @@ import { MessageComponent } from './message/message.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ItemService, MessageService],
   bootstrap: [AppComponent]

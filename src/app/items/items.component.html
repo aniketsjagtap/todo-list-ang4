@@ -10,11 +10,14 @@
     
   
     Add Item : 
-     <input [(ngModel)] = "addItem.name" placeholder = "name" type="text" required>
-     <input [(ngModel)] = "addItem.price" placeholder = "price" type="number" required>
+    <h2>   {{errorMsg}}    </h2>
+     <input [(ngModel)] = "addItem.name" placeholder = "name" type="text" >
+     <input [(ngModel)] = "addItem.price" placeholder = "price" type="number" >
    
-   <button (click)="onAdd()">Add</button>
+     <button (click)="onAdd()">Add</button>
+  
    <hr>
+   <!--<router-outlet></router-outlet>-->
   <table id = "to_do_tab">
     <thead>
       <td>Sr.No.</td>
@@ -33,26 +36,26 @@
           {{item.price}}
       </td>
       <td>
-         <!-- <button (click)="onSelect(item)">Edit</button>
-      &nbsp; &nbsp; &nbsp; &nbsp;-->
+         
           <button (click)="onDelete(i)">Delete</button>
       </td>
     </tr>
-   <!-- <ol class="items">
+  
+  </table>
+  
+  </div>
+<!-- <button (click)="onSelect(item)">Edit</button>
+      &nbsp; &nbsp; &nbsp; &nbsp;-->
+ <!-- <ol class="items">
       <li  >
         <span class="badge"></span> 
        
         
       </li>
     </ol>-->
-  </table>
-  
-  </div>
-
-
 
 <!--<div *ngIf="selectedItem ; else othr_disp">-->
-<div *ngIf="selectedItem">
+<!--<div *ngIf="selectedItem">
   <h2>{{ selectedItem.name | uppercase }} Details</h2>
   
   <div>
@@ -68,3 +71,6 @@
 <ng-template #othr_disp><h2>No Item is selected to Edit</h2></ng-template>
 
 
+-->
+
+<!--{{items}}-->
