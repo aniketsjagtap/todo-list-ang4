@@ -14,7 +14,7 @@
      <input [(ngModel)] = "addItem.name" placeholder = "name" type="text" >
      <input [(ngModel)] = "addItem.price" placeholder = "price" type="number" >
    
-     <button class="btn btn-primary" (click)="onAdd()">Add</button>
+     <button class="btn btn-success" (click)="onAdd()">Add</button>
   
    <hr>
    <!--<router-outlet></router-outlet>-->
@@ -37,7 +37,7 @@
       </td>
       <td>
          
-          <button class="btn btn-primary" (click)="onDelete(i)">Delete</button>
+          <button class="btn btn-danger" (click)="onDelete(i)">Delete</button>
       </td>
     </tr>
   
