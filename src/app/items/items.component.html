@@ -14,11 +14,11 @@
      <input [(ngModel)] = "addItem.name" placeholder = "name" type="text" >
      <input [(ngModel)] = "addItem.price" placeholder = "price" type="number" >
    
-     <button (click)="onAdd()">Add</button>
+     <button class="btn btn-primary" (click)="onAdd()">Add</button>
   
    <hr>
    <!--<router-outlet></router-outlet>-->
-  <table id = "to_do_tab">
+  <table id = "to_do_tab" class="table">
     <thead>
       <td>Sr.No.</td>
       <td>Name</td>
@@ -37,7 +37,7 @@
       </td>
       <td>
          
-          <button (click)="onDelete(i)">Delete</button>
+          <button class="btn btn-primary" (click)="onDelete(i)">Delete</button>
       </td>
     </tr>
   
